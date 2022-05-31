@@ -1,4 +1,4 @@
-# EMP Front-end
+# react-starter-kit
 
 ## Getting Started
 
