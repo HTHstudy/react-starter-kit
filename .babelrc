@@ -4,7 +4,8 @@
     [
       "@babel/preset-react",
       {
-        "runtime": "automatic"
+        "runtime": "automatic",
+        "importSource": "@emotion/react"
       }
     ],
     "@babel/preset-typescript"
@@ -14,7 +15,8 @@
       "@babel/plugin-transform-runtime",
       {
         "regenerator": true
-      }
+      },
+      "@emotion/babel-plugin"
     ]
   ]
 }
