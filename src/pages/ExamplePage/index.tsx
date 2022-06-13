@@ -7,6 +7,8 @@ const ExamplePage = () => {
   const router = useInternalRouter();
   const goMainPage = useCallback(() => router.push('/main'), []);
   const goParentsPage = useCallback(() => router.push('/parents/id_1'), []);
+  const goPostsPage = useCallback(() => router.push('/posts'), []);
+  const goTodoPage = useCallback(() => router.push('/todo'), []);
   const count = useCountValue();
   const { setCount } = useCount();
   const addCount = () => setCount(count + 1);
@@ -18,6 +20,8 @@ const ExamplePage = () => {
       <div css={examplePageCss.pageMoveContainer}>
         <button onClick={goMainPage}>Go MainPage</button>
         <button onClick={goParentsPage}>Go ParentsPage</button>
+        <button onClick={goPostsPage}>Go PostPage</button>
+        <button onClick={goTodoPage}>Go TodoPage</button>
       </div>
       <div css={examplePageCss.countContainer}>
         <button onClick={addCount}>count ++</button>
