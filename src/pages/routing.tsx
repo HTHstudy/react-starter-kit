@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { NavigateOptions, useNavigate } from 'react-router-dom';
 import { useMemo } from 'react';
 
 export function useInternalRouter() {
@@ -8,8 +8,8 @@ export function useInternalRouter() {
       goBack() {
         navigate(-1);
       },
-      push(path: RoutePath) {
-        navigate(path);
+      push(path: RoutePath, options?: NavigateOptions) {
+        navigate(path, options);
       },
     };
   }, [navigate]);

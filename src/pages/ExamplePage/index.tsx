@@ -1,9 +1,9 @@
 import React, { useCallback } from 'react';
-import { css } from '@emotion/react';
 import { useInternalRouter } from '@pages/routing';
 import { useCountValue, useCount } from '@store/client/hooks/useCount';
+import examplePageCss from './examplePageCss';
 
-const LoginPage = () => {
+const ExamplePage = () => {
   const router = useInternalRouter();
   const goMainPage = useCallback(() => router.push('/main'), []);
   const goParentsPage = useCallback(() => router.push('/parents/id_1'), []);
@@ -14,34 +14,18 @@ const LoginPage = () => {
 
   return (
     <div>
-      LoginPage
-      {count}
-      <div
-        css={css`
-          display: flex;
-          gap: 10px;
-          & > button {
-            background-color: tomato;
-          }
-        `}
-      >
+      ExamplePage
+      <div css={examplePageCss.pageMoveContainer}>
         <button onClick={goMainPage}>Go MainPage</button>
         <button onClick={goParentsPage}>Go ParentsPage</button>
       </div>
-      <div
-        css={css`
-          display: flex;
-          gap: 10px;
-          & > button {
-            background-color: skyblue;
-          }
-        `}
-      >
+      <div css={examplePageCss.countContainer}>
         <button onClick={addCount}>count ++</button>
         <button onClick={subtractCount}>count --</button>
       </div>
+      count : {count}
     </div>
   );
 };
 
-export default LoginPage;
+export default ExamplePage;
