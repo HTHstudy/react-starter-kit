@@ -4,6 +4,11 @@ import GlobalStyle from './GlobalStyle';
 import { Routes } from './pages/Routes';
 import colors from '@constants/colors';
 import { RecoilRoot } from 'recoil';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools';
+
+// Create a client
+const queryClient = new QueryClient();
 
 const App = () => {
   return (
@@ -11,7 +16,10 @@ const App = () => {
       <GlobalStyle />
       <Layout>
         <RecoilRoot>
-          <Routes />
+          <QueryClientProvider client={queryClient}>
+            <ReactQueryDevtools initialIsOpen={true} />
+            <Routes />
+          </QueryClientProvider>
         </RecoilRoot>
       </Layout>
     </>

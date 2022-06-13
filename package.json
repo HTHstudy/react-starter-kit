@@ -13,9 +13,11 @@
   },
   "dependencies": {
     "@emotion/styled": "^11.8.1",
+    "axios": "^0.27.2",
     "emotion-normalize": "^11.0.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-query": "^3.39.1",
     "react-router-dom": "^6.3.0",
     "recoil": "^0.7.3-alpha.2"
   },

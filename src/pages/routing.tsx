@@ -15,4 +15,12 @@ export function useInternalRouter() {
   }, [navigate]);
 }
 
-type RoutePath = '/main' | '/login' | '/parents' | `/parents/${string}`;
+type RoutePath =
+  | '/example'
+  | '/main'
+  | '/login'
+  | '/parents'
+  | `/parents/${string}`
+  | '/posts'
+  | `/posts/${number}`
+  | '/todo';
